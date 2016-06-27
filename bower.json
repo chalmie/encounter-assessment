@@ -1,0 +1,25 @@
+{
+  "name": "auth-quickstart",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Blair Peterson"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "bootstrap": "^3.3.6",
+    "handsontable": "^0.25.1"
+  },
+  "resolutions": {
+    "jquery": "^3.0.0"
+  }
+}

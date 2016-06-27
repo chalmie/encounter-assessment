@@ -17,6 +17,8 @@ app.use(cookieParser())
 app.use(session({ secret: '4564f6s4fdsfdfd', resave: false, saveUninitialized: false }))
 
 app.use('/styles', express.static(__dirname + '/styles'))
+app.use('/js', express.static(__dirname + '/js'))
+app.use("/controllers", express.static(__dirname + '/controllers'));
 
 app.use(flash())
 app.use(function(req, res, next) {
@@ -24,14 +26,20 @@ app.use(function(req, res, next) {
     next()
 });
 
+
 app.use(jsonParser)
 app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+// app.post("/dashboard", function(request, response) {
+//       response.send(request.body);
+// });
+
 setupPassport(app)
 
 app.use('/', appRouter)
+
 
 // start app
 app.listen(port)

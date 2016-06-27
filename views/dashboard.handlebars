@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/dashboard">Example app</a>
+      <a class="navbar-brand" href="/dashboard">EncAssess</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -24,45 +24,59 @@
       </ul>
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <h1 class="page-header">Dashboard</h1>
+      <h1 class="page-header">Welcome!</h1>
 
-      <h2 class="sub-header">Section title</h2>
+
+
+
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
+              <th>Time</th>
+              <th>Patient</th>
+              <th>Care</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td>dolor</td>
-              <td>sit</td>
-            </tr>
-            <tr>
-              <td>1,002</td>
-              <td>amet</td>
-              <td>consectetur</td>
-              <td>adipiscing</td>
-              <td>elit</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>Integer</td>
-              <td>nec</td>
-              <td>odio</td>
-              <td>Praesent</td>
-            </tr>
+            <form method="POST" action="/dashboard" id="createDay">
+              {{#each times}}
+              <tr id="entry-table">
+                <td>{{this}}</td>
+                <td><input type="text" class="entry" name="entry" autofocus></td>
+                <td><input type="text" class="entry" name="entry" autofocus></td>
+                <td><input type="text" class="entry" name="entry" autofocus></td>
+              </tr>
+              {{/each}}
+              <h2 class="sub-header" id="currentDate" name="currentDate">{{now}}</h2>
+              <button class="btn btn-lg btn-primary btn-block" type="submit" id="entry-submit">Submit</button>
+            </form>
           </tbody>
         </table>
+
       </div>
     </div>
   </div>
 </div>
+
+
+<script>
+
+  // var entries = document.getElementsByClassName("entry");
+  // var values = [];
+  // for (var z=0; z < entries.length; z++) {
+  //   values.push(entries[z].value);
+  // }
+  // console.log(values);
+
+  // console.log(currentDate.innerHTML);
+  // currentDate = document.getElementById('currentDate').innerHTML;
+  // console.log(currentDate);
+  // var data = [];
+  // var table = document.getElementById( 'entry-table' ).children;
+  // console.log(table);
+  // console.log(document.getElementsByTagName('contenteditable').value);
+
+
+</script>

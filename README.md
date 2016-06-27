@@ -1,6 +1,6 @@
-# Authentication Quickstart with Express, Passport and Sequelize
+# EncAssess
 
-This is a quick-start application that demonstrates basic authentication using Passport and Sequelize. It is built with:
+Allows caregivers to document patient care.
 * [Node.js](https://nodejs.org/en/)
 * [Express](http://expressjs.com/)
 * [Passport](http://passportjs.org)
@@ -8,17 +8,20 @@ This is a quick-start application that demonstrates basic authentication using P
 * [Handlebars](http://handlebarsjs.com/)
 * and [Nightwatch](http://nightwatchjs.org/)
 
-I wrote a blog post [Authentication Quickstart with Express, Passport and Sequelize](http://stribny.name/blog/2015/09/authentication-quickstart-with-express-passport-and-sequelize) about this quick-start.
-
 ## Requirements
 
-As it is a Node application, you will need Node.js installed. 
+* [Node.js](https://nodejs.org/en/)
+* [Express](http://expressjs.com/)
+* [Passport](http://passportjs.org)
+* [Sequelize](http://sequelizejs.com)
+* [Handlebars](http://handlebarsjs.com/)
+* [Nightwatch](http://nightwatchjs.org/)
 
-The app uses a SQL database via Sequelize ORM. It was tested with PostgreSQL, but should work with other supported databases as well.
+The app uses a PostgreSQL database via Sequelize ORM.
 
 ## Installation
 
-Clone the repository and simply run `npm install` from the root folder.
+Clone the repository and run `npm install` from the root folder.
 
 ## Configuration
 
@@ -30,11 +33,10 @@ When Sequelize is configured, you can run the setup script that creates the `use
 node setup.js
 ```
 
-If you want to run the tests, it is necessary to configure Nightwatch.js using the `nightwatch.json` file. Namely it is required to provide server path to selenium. For more information see the [documentation](http://nightwatchjs.org/guide#settings-file).
 
 ## Run the application
 
-From the root folder of the project, you can run the application with: 
+From the root folder of the project, you can run the application with:
 ```
 node app.js
 ```
@@ -46,12 +48,6 @@ Available pages:
 * Dashboard [requires to be logged in] on `http://localhost:8080/dashboard`
 * Log out on `http://localhost:8080/logout`
 
-## Run the tests
-
-A basic set of Nightwatch end-to-end tests is provided. To run the tests, first make sure that the application is running and then start the test suite by typing `nightwatch` in the root folder. Note that you have to configure Nightwatch.js first.
-
 ## License
 
-Author: [Petr Stříbný](http://stribny.name)
-
-License: The MIT License (MIT)
+???
