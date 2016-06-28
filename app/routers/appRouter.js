@@ -31,6 +31,7 @@ module.exports = function(express) {
   router.get('/dashboard', isAuthenticated, function(req, res) {
     res.render('dashboard', {
       title: 'Helloooooo',
+      username: req.user.username,
       now: moment(new Date()).format("YYYY-MM-DD"),
       moment: moment,
       times:
@@ -38,7 +39,7 @@ module.exports = function(express) {
     });
   })
 
-  router.post('/dashboard', dashboardController.createDay)
+  router.post('/dashboard', dashboardController.createEntry)
 
 
   router.get('/logout', function(req, res) {

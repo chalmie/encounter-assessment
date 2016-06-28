@@ -17,5 +17,8 @@
     "connect-flash": "~0.1.1",
     "bcrypt": "~0.8.5",
     "express-handlebars": "~2.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
   }
 }

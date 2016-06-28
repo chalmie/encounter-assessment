@@ -1,6 +1,9 @@
 var Sequelize = require('sequelize')
 
 var attributes = {
+  day: {
+    type: Sequelize.DATE
+  },
   time: {
     type: Sequelize.STRING,
   },
@@ -12,6 +15,9 @@ var attributes = {
   },
   note: {
     type: Sequelize.STRING,
+  },
+  userId: {
+    type: Sequelize.INTEGER
   }
 }
 

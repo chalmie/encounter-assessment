@@ -12,18 +12,14 @@ module.exports = function(callback) {
     }).then(callback)
   })
 
-  Model.Day.sync({ force: true }).then(function() {
-    Model.Day.create({
-      day: '2012-06-27'
-    }).then(callback)
-  })
-
   Model.Entry.sync({ force: true }).then(function() {
     Model.Entry.create({
+      day: '2012-06-27',
       time: '00:15',
       patient: 'John Smith',
       care: 'Physical Rehab',
-      note: 'Steady Progress'
+      note: 'Steady Improvement',
+      userId: 1
     }).then(callback)
   })
 }
