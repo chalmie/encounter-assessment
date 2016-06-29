@@ -3,7 +3,8 @@ var passport = require('passport'),
     dashboardController = require('../controllers/dashboardController.js'),
     admin = require('../../views/admin.handlebars'),
     db = require('sequelize'),
-    moment = require('moment')
+    moment = require('moment'),
+    models = require('../model/models.js')
 
 
 module.exports = function(express) {
@@ -25,11 +26,15 @@ module.exports = function(express) {
       failureFlash: true
   }))
 
-  // router.get('/admin', function(req, res) {
-  //   res.render('admin', {
-  //
-  //   })
-  // })
+  router.get('/admin', function(req, res) {
+    models.User.findAll({
+    }).then(function(users) {
+      res.render('admin', {
+        title: 'Express',
+        users: users
+      });
+    });
+  });
 
   router.get('/', function(req, res) {
     res.render('home')

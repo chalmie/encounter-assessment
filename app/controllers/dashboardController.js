@@ -22,7 +22,7 @@ module.exports.createEntry = function(req, res) {
     slicedEntries[j].unshift(now);
     j++;
   }
-  var obj = [];
+  
   var k = 0;
   while (k < slicedEntries.length) {
     var entry = slicedEntries[k];
