@@ -22,7 +22,7 @@ module.exports.createEntry = function(req, res) {
     slicedEntries[j].unshift(now);
     j++;
   }
-  
+
   var k = 0;
   while (k < slicedEntries.length) {
     var entry = slicedEntries[k];
@@ -38,4 +38,5 @@ module.exports.createEntry = function(req, res) {
     Model.Entry.create(newEntry);
     k++;
   }
+  
 }

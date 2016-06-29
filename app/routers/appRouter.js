@@ -30,7 +30,6 @@ module.exports = function(express) {
     models.User.findAll({
     }).then(function(users) {
       res.render('admin', {
-        title: 'Express',
         users: users
       });
     });
