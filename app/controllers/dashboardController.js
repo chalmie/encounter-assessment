@@ -34,10 +34,8 @@ module.exports.createEntry = function(req, res) {
       note: entry[4],
       userId: req.user.id
     }
-    obj.push(newEntry)
+
     Model.Entry.create(newEntry);
     k++;
   }
-
-  res.send(obj);
 }

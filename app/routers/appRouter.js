@@ -1,6 +1,7 @@
 var passport = require('passport'),
     signupController = require('../controllers/signupController.js'),
     dashboardController = require('../controllers/dashboardController.js'),
+    admin = require('../../views/admin.handlebars'),
     db = require('sequelize'),
     moment = require('moment')
 
@@ -23,6 +24,12 @@ module.exports = function(express) {
       failureRedirect: '/',
       failureFlash: true
   }))
+
+  // router.get('/admin', function(req, res) {
+  //   res.render('admin', {
+  //
+  //   })
+  // })
 
   router.get('/', function(req, res) {
     res.render('home')
