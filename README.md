@@ -1,4 +1,4 @@
-# EncAssess
+# encounter-assessment
 
 Allows caregivers to document patient care.
 
