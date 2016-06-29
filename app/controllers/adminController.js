@@ -1,8 +1,6 @@
 var Model = require('../model/models.js'),
-    moment = require('moment')mo
+    moment = require('moment')
 
 module.exports.displayUsers = function(req,res) {
-  User.findAll({
-    attributes: [username]
-  });
+
 }
