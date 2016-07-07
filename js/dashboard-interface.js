@@ -1,6 +1,6 @@
-// $(document).ready(function() {
-//   $('#entry-submit').click(function(event) {
-//     event.preventDefault();
-//     console.log("success!");
-//   });
-// });
+$(document).ready(function() {
+  $('#entry-submit').click(function(event) {
+    event.preventDefault();
+    console.log("success!");
+  });
+});

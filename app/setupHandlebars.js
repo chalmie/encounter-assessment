@@ -7,6 +7,8 @@ module.exports = function(app) {
       formatDate: function (date, format) {
             return moment(date).format(format);
         },
+      listEntries: function (entries) {
+      },
       section: function(name, options) {
         if (!this._sections) this._sections = {}
         this._sections[name] = options.fn(this)

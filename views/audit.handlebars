@@ -25,41 +25,10 @@
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1 class="page-header">Welcome {{username}}!</h1>
-      <a href="/signup" button class="btn btn-lg btn-primary btn-block">Add Caregiver</a>
-      <button class="btn btn-lg btn-primary btn-block" id="patient">Add Patient</button>
-      <button class="btn btn-lg btn-primary btn-block" id="care">Add Type of Care</button>
 
-      <form class='patient-form'>
-        <fieldset class="form-group">
-          <label for="user-name">User Name</label>
-          <select class="form-control" id="exampleSelect1">
-            {{#each users}}
-              <option>{{this.username}}</option>
-            {{/each}}
-          </select>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="patient-name">Patient Name</label>
-          <input type="text" class="form-control" name="patient-name" required autofocus>
-        </fieldset>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-      </form>
-      <form class='care-form'>
-        <fieldset class="form-group">
-          <label for="user-name">User Name</label>
-          <select class="form-control" id="exampleSelect1">
-            {{#each users}}
-              <option>{{this.username}}</option>
-            {{/each}}
-          </select>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="patient-care">Type of Care</label>
-          <input type="text" class="form-control" name="patient-care" required autofocus>
-        </fieldset>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-      </form>
-      <!-- <div class="table-responsive"> -->
+
+
+      <div class="table-responsive">
         <!-- <table class="table table-striped">
           <thead>
             <tr>
@@ -85,9 +54,7 @@
           </tbody>
         </table> -->
 
-      <!-- </div> -->
+      </div>
     </div>
   </div>
 </div>
-
-<script src="js/admin-interface.js"></script>

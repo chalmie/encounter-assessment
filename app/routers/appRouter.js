@@ -35,6 +35,16 @@ module.exports = function(express) {
     });
   });
 
+
+  router.get('/audit', function(req, res) {
+    models.User.findAll({
+    }).then(function(users) {
+      res.render('audit', {
+        users: users
+      });
+    });
+  });
+
   router.get('/', function(req, res) {
     res.render('home')
   })
@@ -43,7 +53,10 @@ module.exports = function(express) {
     models.Entry.findAll({
       where: {
         userId: req.user.id
-      }
+      },
+      order: [
+        ['id']
+      ]
     }).then(function(entries) {
       res.render('dashboard', {
         title: 'Helloooooo',
@@ -59,7 +72,6 @@ module.exports = function(express) {
 
 
   router.post('/dashboard', dashboardController.createEntry)
-
 
   router.get('/logout', function(req, res) {
     req.logout()
