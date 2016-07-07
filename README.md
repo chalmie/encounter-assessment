@@ -41,6 +41,8 @@ Available pages:
 * Log in on `http://localhost:8080`
 * Sign up on `http://localhost:8080/signup`
 * Dashboard [requires to be logged in] on `http://localhost:8080/dashboard`
+* Admin on `http://localhost:8080/admin`
+* Audit on `http://localhost:8080/audit`
 * Log out on `http://localhost:8080/logout`
 
 ## License
